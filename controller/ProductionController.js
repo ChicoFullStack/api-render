@@ -60,7 +60,7 @@ productionExpressRoute.get('/list-tags', async (req, res) => {
 productionExpressRoute.get('/list-one', async (req, res) => {
 
     try {
-        const data = await ProductionSchema.find({}).limit(1).sort({ $natural: -1 });
+        const data = await ProductionSchema.find({}).limit(10).sort({ $natural: -1 });
         res.json(data);
         
     } catch (err) {
